@@ -3,10 +3,10 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import neurokit2 as nk
-# import intan_rhd_format.load_intan_rhd_format
+import load_intan_rhd_format
 
 
-# print(read_data(r'D:\ECG\ECG002_221109_172137\info.rhd'))
+print(load_intan_rhd_format.read_data(r'D:\ECG\ECG002_221109_172137\info.rhd'))
 with open(r'D:\ECG\ECG002_221109_172137\amplifier.dat', 'rb') as f:
     ECGfileData = np.fromfile(f, dtype=np.int16)
 ECGfileData = ECGfileData * 0.195
